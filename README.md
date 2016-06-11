@@ -1,38 +1,103 @@
-# \<skip-to-content\>
+# &lt;skip-to-content&gt;
 
-A Polymer element for Skip to Content.
+> <⬇️/> A Polymer element for Skip to Content.
 
-## Install the Polymer-CLI
+![demo](skip-demo.gif)
 
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
+## Live Demo
 
-## Viewing Your Application
+[Check it live!](http://afonsopacifer.github.io/skip-to-content/)
 
-```
-$ polymer serve
-```
+## Install
 
-## Building Your Application
+Install the component using [Bower](http://bower.io/):
 
-```
-$ polymer build
+```sh
+$ bower install skip-to-content --save
 ```
 
-This will create a `build/` folder with `bundled/` and `unbundled/` sub-folders
-containing a bundled (Vulcanized) and unbundled builds, both run through HTML,
-CSS, and JS optimizers.
+## Usage
 
-You can serve the built versions by giving `polymer serve` a folder to serve
-from:
+1. Import Web Components' polyfill:
 
-```
-$ polymer serve build/bundled
+```html
+<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 ```
 
-## Running Tests
+2. Import Custom Element:
 
-```
-$ polymer test
+```html
+<link rel="import" href="bower_components/skip-to-content/skip-to-content.html">
 ```
 
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+3. Start using it!
+
+```html
+<skip-to-content skipTo="#main" color="#e00571"></skip-to-content>
+```
+
+## Attributes
+
+Attribute  | Type        | Default             | Description
+---        | ---         | ---                 | ---
+`skipTo`   | *String*    | `#main`    | Destination ID.
+`color` | *String*   | `#000`             | The background color.
+
+## Style
+
+Style the element with CSS as you would a normal DOM element.
+
+```CSS
+.skip-to-content {
+
+}
+```
+
+## Browser Support
+
+Using the [webcomponents.js](https://github.com/WebComponents/webcomponentsjs)
+
+![IE](https://cloud.githubusercontent.com/assets/398893/3528325/20373e76-078e-11e4-8e3a-1cb86cf506f0.png) | ![Chrome](https://cloud.githubusercontent.com/assets/398893/3528328/23bc7bc4-078e-11e4-8752-ba2809bf5cce.png) | ![Firefox](https://cloud.githubusercontent.com/assets/398893/3528329/26283ab0-078e-11e4-84d4-db2cf1009953.png) | ![Opera](https://cloud.githubusercontent.com/assets/398893/3528330/27ec9fa8-078e-11e4-95cb-709fd11dac16.png) | ![Safari](https://cloud.githubusercontent.com/assets/398893/3528331/29df8618-078e-11e4-8e3e-ed8ac738693f.png)
+--- | --- | --- | --- | --- |
+11+ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔
+
+## Development
+
+1. Install [Bower](http://bower.io/) & [Polymer-CLI](https://www.polymer-project.org/1.0/docs/tools/polymer-cli):
+
+```sh
+$ [sudo] npm install -g bower polymer-cli
+```
+
+2. Install local dependencies:
+
+```sh
+$ bower install
+```
+
+3. Start the development server on http://localhost:8080/:
+
+```sh
+$ polyserve
+```
+
+**View docs:**<br>
+http://localhost:8080/components/skip-to-content/
+
+**View demo:**<br>
+http://localhost:8080/components/skip-to-content/demo/
+
+## Versioning
+
+To keep better organization of releases we follow the [Semantic Versioning 2.0.0](http://semver.org/) guidelines.
+
+## Contributing
+Find on our [issues](https://github.com/afonsopacifer/skip-to-content/issues/) the next steps of the project ;)
+<br>
+Want to contribute? [Follow these recommendations](https://github.com/afonsopacifer/skip-to-content/blob/master/CONTRIBUTING.md).
+
+## History
+See [Releases](https://github.com/afonsopacifer/skip-to-content/releases) for detailed changelog.
+
+## License
+[MIT License](https://github.com/afonsopacifer/skip-to-content/blob/master/LICENSE.md) © [Afonso Pacifer](http://afonsopacifer.com/)

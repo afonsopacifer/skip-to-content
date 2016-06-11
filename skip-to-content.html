@@ -3,11 +3,23 @@
 <dom-module id="skip-to-content">
   <template>
     <style>
-      :host {
-        display: block;
+      .skip-to-content {
+        width: 100%;
+        max-width: 200px;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        position: absolute;
+        z-index: 999;
+        left: -999px;
+        top: 0;
+      }
+
+      .skip-to-content:focus {
+        left: 0;
       }
     </style>
-    <h2>Hello [[prop1]]</h2>
+    <a href="{{skipTo}}" class="skip-to-content" style="background-color:{{color}};">Skip to Content</a>
   </template>
 
   <script>
@@ -16,9 +28,13 @@
       is: 'skip-to-content',
 
       properties: {
-        prop1: {
+        skipTo: {
           type: String,
-          value: 'skip-to-content',
+          value: '#main',
+        },
+        color: {
+          type: String,
+          value: '#000',
         },
       },
 

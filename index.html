@@ -1,14 +1,20 @@
 <!doctype html>
-
 <html>
   <head>
-    <title>skip-to-content</title>
+    <title>skip-to-content demo</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="../iron-component-page/iron-component-page.html">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="bower_components/skip-to-content/skip-to-content.html">
+
+    </style>
   </head>
   <body>
-    <iron-component-page src="skip-to-content.html"></iron-component-page>
+
+    <skip-to-content skipTo="#main" color="#e00571"></skip-to-content>
+
+    <h1>Press Tab for skip</h1>
+
   </body>
 </html>

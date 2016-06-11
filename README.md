@@ -81,6 +81,12 @@ $ bower install
 $ polyserve
 ```
 
+3. Running tests
+
+```sh
+$ polymer test test/index.html -l chrome
+```
+
 **View docs:**<br>
 http://localhost:8080/components/skip-to-content/
 

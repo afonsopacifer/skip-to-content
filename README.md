@@ -66,7 +66,7 @@ Using the [webcomponents.js](https://github.com/WebComponents/webcomponentsjs)
 1. Install [Bower](http://bower.io/) & [Polymer-CLI](https://www.polymer-project.org/1.0/docs/tools/polymer-cli):
 
 ```sh
-$ [sudo] npm install -g bower polymer-cli
+$ [sudo] npm install -g bower polymer-cli polyserve
 ```
 
 2. Install local dependencies:

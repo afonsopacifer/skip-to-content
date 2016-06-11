@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>skip-to-content test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+    <link rel="import" href="../skip-to-content.html">
+  </head>
+  <body>
+
+    <test-fixture id="basic">
+      <template>
+        <skip-to-content></skip-to-content>
+      </template>
+    </test-fixture>
+
+    <test-fixture id="skipTo">
+      <template>
+        <skip-to-content skip-to='#testsAreAmazing'></skip-to-content>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('skip-to-content', function() {
+
+        test('instantiating without properties should be works', function() {
+          let element = fixture('basic');
+          assert.equal(element.is, 'skip-to-content');
+        });
+
+        test('the area shows the correct text', function() {
+          let element = fixture('basic');
+          let rootDomElement = Polymer.dom(element.root).querySelector('.skip-to-content');
+
+          assert.equal(rootDomElement.innerHTML, 'Skip to Content');
+        });
+
+        test('instantiating with propertie skipTo should be works', function() {
+          let element = fixture('skipTo');
+          let rootDomElement = Polymer.dom(element.root).querySelector('.skip-to-content');
+
+          assert.equal(rootDomElement.getAttribute('href'), '#testsAreAmazing');
+        });
+
+        test('verify web accessibility with a11y cases', function() {
+          a11ySuite('basic');
+        });
+      });
+    </script>
+  </body>
+</html>

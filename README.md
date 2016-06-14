@@ -2,7 +2,7 @@
 
 > <⬇️/> A Polymer element for Skip to Content.
 
-![demo](skip-demo.gif)
+![demo](https://raw.githubusercontent.com/afonsopacifer/skip-to-content/master/skip-demo.gif)
 
 ## Live Demo
 
